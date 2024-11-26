@@ -1,5 +1,5 @@
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -7,7 +7,7 @@ body {
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	background-color: #f0f0f0;
+	background-color: #ffffff;
 	min-height: 100vh;
 	/* Ensures the body takes up at least the full screen height */
 	overflow-x: hidden;
@@ -16,7 +16,7 @@ body {
 
 header {
 	width: 100%;
-	background-color: #333;
+	background-color: #df0024;
 	padding: 10px 0;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	position: fixed;
@@ -89,14 +89,14 @@ nav ul li a:hover {
 
 .info-block {
 	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 10px;
+	border: 2px solid #ccc;
+	/*border-radius: 10px;*/
 	padding: 20px;
 	min-width: 500px;
 	max-width: auto;
 	text-align: center;
 	/* Centers text inside the block */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 }
 
 .info-block h3 {
@@ -117,12 +117,12 @@ nav ul li a:hover {
 
 .link-block {
 	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 10px;
+	border: 2px solid #ccc;
+	/*border-radius: 10px;*/
 	padding: 20px;
 	width: 300px;
 	text-align: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 	transition: transform 0.2s ease-in-out;
 }
 
@@ -199,14 +199,14 @@ p {
 /* Styles specifically for the Favorites page */
 .favorites-page .link-block {
 	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	padding: 20px;
+	border: 2px solid #ccc;
+	/*border-radius: 10px;*/
+	padding: 10px;
 	text-align: left;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 	transition: transform 0.2s ease-in-out;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 15px;
 	width: 100%;
 	/* Ensure it takes up all available width */
@@ -223,8 +223,8 @@ p {
 }
 
 .favorites-page .link-block img {
-	width: auto;
-	height: 140px;
+	width: 80px;
+	height: auto;
 	object-fit: cover;
 	border-radius: 5px;
 }
