@@ -174,7 +174,7 @@ p {
 .favorites-section+.favorites-section {
 	margin-top: 40px;
 	/* Space between sections */
-	border-top: 2px solid #ccc;
+	/*border-top: 2px solid #ccc;*/
 	/* Line between sections */
 }
 
@@ -273,8 +273,8 @@ p {
 }
 
 .favorites-page .favorites-section+.favorites-section {
-	margin-top: 40px;
-	border-top: 2px solid #ccc;
+	margin-top: 20px;
+	/*border-top: 2px solid #ccc;*/
 }
 
 /* For mobile view */
