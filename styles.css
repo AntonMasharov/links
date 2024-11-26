@@ -1,11 +1,54 @@
 body {
 	font-family: Arial, sans-serif;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	/* Allow content to scroll from the top */
 	align-items: center;
-	height: 100vh;
 	margin: 0;
+	padding: 0;
 	background-color: #f0f0f0;
+	min-height: 100vh;
+	/* Ensures the body takes up at least the full screen height */
+	overflow-x: hidden;
+	/* Prevent horizontal overflow */
+}
+
+header {
+	width: 100%;
+	background-color: #333;
+	padding: 10px 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+nav ul li {
+	margin: 0;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+	background-color: #555;
 }
 
 .container {
@@ -13,7 +56,63 @@ body {
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+	width: 100%;
+	max-width: 800px;
+	padding: 20px;
+	overflow-y: auto;
+	margin-top: 80px;
+	/* Adjust margin to account for the header height */
 }
+
+.fav_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	width: 100%;
+	max-width: 800px;
+	padding: 20px;
+	margin-top: 0px;
+	/* Account for the header height */
+}
+
+.favorites-section {
+	width: 100%;
+}
+
+.favorites-section h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.info-block {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 20px;
+	width: 500px;
+	text-align: center;
+	/* Centers text inside the block */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-block h3 {
+	margin: 0 0 10px;
+	text-align: left;
+	/* Adds spacing between the header and the content */
+	font-size: 20px;
+	color: #333;
+}
+
+.info-block p {
+	margin: 0;
+	text-align: left;
+	color: #666;
+	font-size: 16px;
+}
+
 
 .link-block {
 	background-color: white;
@@ -48,4 +147,150 @@ body {
 .link-block span {
 	font-size: 18px;
 	font-weight: bold;
+}
+
+h1 {
+	color: #333;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p {
+	color: #666;
+	font-size: 16px;
+	text-align: center;
+	width: 100%;
+	max-width: 600px;
+}
+
+.blocks {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.favorites-section+.favorites-section {
+	margin-top: 40px;
+	/* Space between sections */
+	border-top: 2px solid #ccc;
+	/* Line between sections */
+}
+
+@media (max-width: 768px) {
+	.favorites-section h2 {
+		font-size: 20px;
+	}
+
+	.link-block {
+		width: 100%;
+	}
+
+	.blocks {
+		justify-content: flex-start;
+	}
+}
+
+/* Styles specifically for the Favorites page */
+.favorites-page .link-block {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: left;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease-in-out;
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	width: 100%;
+	/* Ensure it takes up all available width */
+	box-sizing: border-box;
+	/* Includes padding and border in width */
+}
+
+.favorites-page .link-block a {
+	text-decoration: none;
+	color: #333;
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+}
+
+.favorites-page .link-block img {
+	width: auto;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.favorites-page .book-info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.favorites-page .book-title {
+	font-size: 21px;
+	margin-top: 7px;
+	font-weight: bold;
+}
+
+.favorites-page .book-author {
+	font-size: 14px;
+	color: #666;
+}
+
+.favorites-page .link-block:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional layout styles for the Favorites page */
+.favorites-page .favorites-section {
+	margin-top: 40px;
+}
+
+.favorites-page .favorites-section h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* Layout for sections in the Favorites page */
+.favorites-page .blocks {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+	justify-content: center;
+	width: 100%;
+}
+
+.favorites-page .favorites-section+.favorites-section {
+	margin-top: 40px;
+	border-top: 2px solid #ccc;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+	.favorites-page .link-block {
+		width: 100%;
+	}
+
+	.favorites-page .book-info {
+		gap: 3px;
+	}
+
+	.favorites-page .book-title {
+		font-size: 16px;
+	}
+
+	.favorites-page .book-author {
+		font-size: 12px;
+	}
+
+	.favorites-page .blocks {
+		justify-content: flex-start;
+	}
 }

@@ -1,0 +1,60 @@
+		<!-- Movies Section -->
+		<section class="favorites-section">
+			<h2>Фильмы</h2>
+			<div class="blocks">
+				<div class="link-block">
+					<a href="#">
+						<img src="movie1.jpg" alt="Movie 1">
+						<span>Название фильма 1</span>
+					</a>
+				</div>
+				<div class="link-block">
+					<a href="#">
+						<img src="movie2.jpg" alt="Movie 2">
+						<span>Название фильма 2</span>
+					</a>
+				</div>
+				<!-- More movies here -->
+			</div>
+		</section>
+
+		<!-- Music Section -->
+		<section class="favorites-section">
+			<h2>Музыка</h2>
+			<div class="blocks">
+				<div class="link-block">
+					<a href="#">
+						<img src="music1.jpg" alt="Music 1">
+						<span>Название музыки 1</span>
+					</a>
+				</div>
+				<div class="link-block">
+					<a href="#">
+						<img src="music2.jpg" alt="Music 2">
+						<span>Название музыки 2</span>
+					</a>
+				</div>
+				<!-- More music here -->
+			</div>
+		</section>
+
+				<!-- Games Section -->
+		<section class="favorites-section">
+			<h2>Игры</h2>
+			<div class="blocks">
+				<div class="link-block">
+					<a href="#">
+						<img src="game1.jpg" alt="Game 1">
+						<span>Название игры 1</span>
+					</a>
+				</div>
+				<div class="link-block">
+					<a href="#">
+						<img src="game2.jpg" alt="Game 2">
+						<span>Название игры 2</span>
+					</a>
+				</div>
+				<!-- More games here -->
+			</div>
+		</section>
+	</div>
